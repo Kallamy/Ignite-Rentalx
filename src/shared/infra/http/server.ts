@@ -3,6 +3,8 @@ import express, {  Request, Response, NextFunction } from 'express';
 import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
 
+import createConnection from "shared/infra/typeorm"
+
 import "@shared/infra/typeorm";
 import "@shared/container";
 
@@ -11,7 +13,7 @@ import swaggerFile from "../../../swagger.json";
 import { router } from "./routes";
 
 
-
+createConnection();
 const app = express();
 
 app.use(express.json());
@@ -34,5 +36,5 @@ app.use(
         });
     }
 );
-
+ 
 app.listen(3333, () => console.log("Server is running!"));

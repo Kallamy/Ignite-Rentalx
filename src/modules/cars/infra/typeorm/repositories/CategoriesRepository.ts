@@ -39,4 +39,4 @@ implements ICategoriesRepository {
     }
 }
 
-export { CategoriesRepository }
+export { CategoriesRepository, ICreateCategoryDTO }

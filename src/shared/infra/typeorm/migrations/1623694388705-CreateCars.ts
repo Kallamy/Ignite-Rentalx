@@ -23,7 +23,6 @@ export class CreateCars1623694388705 implements MigrationInterface {
                     {
                         name: "daily_rate",
                         type: "numeric",
-                        isPrimary: true
                     },
                     {
                         name: "available",
